@@ -1,0 +1,40 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "iThink 365 Read Receipt Tasks Teams App",
+    "id": "62c76502-fa55-42e8-a69d-91ba63fba358",
+    "version": "1.0.1.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "developer": {
+      "name": "iThink 365",
+      "websiteUrl": "",
+      "privacyUrl": "",
+      "termsOfUseUrl": "",
+      "mpnId": ""
+    },
+    "metadata": {
+      "shortDescription": {
+        "default": "iThink 365 Read Receipt Teams App Powered Planner Task Solution."
+      },
+      "longDescription": {
+        "default": "iThink 365 Read Receipt Teams App uses Planner to provide a custom solution to the problem of how to manage, audit and confirm users have read important content."
+      },
+      "screenshotPaths": [],
+      "videoUrl": "",
+      "categories": []
+    },
+    "features": [
+      {
+        "title": "my-tasks Feature",
+        "description": "The feature that activates elements of the my-tasks solution.",
+        "id": "1f1653dc-b288-4a95-91ee-18990a646553",
+        "version": "1.0.0.0"
+      }
+    ]
+  },
+  "paths": {
+    "zippedPackage": "solution/i365-readreceipt-tasks-app.sppkg"
+  }
+}

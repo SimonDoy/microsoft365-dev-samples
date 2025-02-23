@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <AzureFunctionsVersion>v4</AzureFunctionsVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Azure.Data.Tables" Version="12.9.1" />
+    <PackageReference Include="Azure.Identity" Version="1.13.2" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.22.2" />
+    <PackageReference Include="Azure.Storage.Files.Shares" Version="12.20.1" />
+    <PackageReference Include="Azure.Storage.Queues" Version="12.20.1" />
+    <PackageReference Include="Microsoft.Azure.Functions.Extensions" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Azure.WebJobs.Extensions.Storage" Version="5.3.2" />
+    <PackageReference Include="Microsoft.Extensions.Azure" Version="1.7.6" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.2" />
+    <PackageReference Include="Microsoft.Graph.Beta" Version="5.93.0-preview" />
+    <PackageReference Include="Microsoft.NET.Sdk.Functions" Version="4.6.0" />
+    <PackageReference Include="Microsoft.Owin" Version="4.2.2" />
+    <PackageReference Include="Owin" Version="1.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="host.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="local.settings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Never</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>

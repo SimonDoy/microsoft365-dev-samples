@@ -1,0 +1,24 @@
+{
+  "@microsoft/generator-sharepoint": {
+    "whichFolder": "subdir",
+    "solutionName": "MyTasks",
+    "environment": "spo",
+    "skipFeatureDeployment": true,
+    "isDomainIsolated": false,
+    "componentType": "webpart",
+    "template": "react",
+    "componentName": "MyTasks",
+    "plusBeta": false,
+    "isCreatingSolution": true,
+    "nodeVersion": "18.20.4",
+    "sdksVersions": {
+      "@microsoft/microsoft-graph-client": "3.0.2",
+      "@microsoft/teams-js": "2.12.0"
+    },
+    "version": "1.19.0",
+    "libraryName": "my-tasks",
+    "libraryId": "62c76502-fa55-42e8-a69d-91ba63fba358",
+    "packageManager": "npm",
+    "solutionShortDescription": "MyTasks description"
+  }
+}

@@ -1,0 +1,31 @@
+@import '~@fluentui/react/dist/sass/References.scss';
+
+.container {
+  margin: 0 auto;
+  padding: 20px;
+
+  thead {
+    font-weight: bold;
+  }
+}
+
+.navigation {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.editTask {
+  position: 'absolute';
+  top: 70px;
+  right: 20px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.pillButton {
+  border-radius: 75px;
+}

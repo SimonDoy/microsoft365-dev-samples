@@ -1,0 +1,72 @@
+{
+    "$schema": "https://developer.microsoft.com/en-us/json-schemas/teams/v1.17/MicrosoftTeams.schema.json",
+    "manifestVersion": "1.17",
+    "id": "${{TEAMS_APP_ID}}",
+    "version": "1.0.1",
+    "developer": {
+        "name": "ITHINK 365 LTD Leeds",
+        "websiteUrl": "https://www.ithink365.co.uk",
+        "privacyUrl": "https://www.ithink365.co.uk/ithink-connect-privacy-policy",
+        "termsOfUseUrl": "https://www.ithink365.co.uk/ithink-connect-terms-of-service",
+        "mpnId": ""
+      },
+    "name": {
+        "short": "iThink Connect Sync Tasks",
+        "full": "iThink Connect Sync Tasks Preview"
+    },
+    "description": {
+        "short": "Stay up to date with your tasks (preview).",
+        "full": "iThink Connect Sync is a powerful Microsoft Teams app created by iThink365 to help users stay organized, productive, and in sync with their teams (preview)."
+    },
+    "icons": {
+        "color": "iThinkConnectSyncTasks-Icon-Color.png",
+        "outline": "iThinkConnectSyncTasks-Icon-Color-Outline.png"
+    },
+    "accentColor": "#004578",
+    "staticTabs": [
+        {
+            "entityId": "aac21461-7439-49d1-a2ce-f5ab67b67a90",
+            "name": "My Tasks",
+            "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=fac21461-7439-49d1-a2ce-f5ab67b67a90%26forceLocale={locale}",
+            "websiteUrl": "https://products.office.com/en-us/sharepoint/collaboration",
+            "scopes": [
+                "personal"
+            ]
+        },
+        {
+            "entityId": "aac21461-7439-49d1-a2ce-f5ab67b67a91",
+            "name": "Action Tasks",
+            "contentUrl": "https://{teamSiteDomain}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest=/_layouts/15/teamshostedapp.aspx%3Fteams%26personal%26componentId=fac21461-7439-49d1-a2ce-f5ab67b67a91%26forceLocale={locale}",
+            "websiteUrl": "https://products.office.com/en-us/sharepoint/collaboration",
+            "scopes": [
+                "personal"
+            ]
+        }
+    ],
+    "configurableTabs": [
+        {
+            "configurationUrl": "https://{teamSiteDomain}{teamSitePath}/_layouts/15/TeamsLogon.aspx?SPFX=true&dest={teamSitePath}/_layouts/15/teamshostedapp.aspx%3FopenPropertyPane=true%26teams%26componentId=fac21461-7439-49d1-a2ce-f5ab67b67a90%26forceLocale={locale}",
+            "canUpdateConfiguration": true,
+            "scopes": [
+                "team"
+            ]
+        }
+    ],
+    "permissions": [
+        "identity",
+        "messageTeamMembers"
+    ],
+    "validDomains": [
+        "*.login.microsoftonline.com",
+        "*.sharepoint.com",
+        "*.sharepoint-df.com",
+        "spoppe-a.akamaihd.net",
+        "spoprod-a.akamaihd.net",
+        "resourceseng.blob.core.windows.net",
+        "msft.spoppe.com"
+    ],
+    "webApplicationInfo": {
+        "resource": "https://{teamSiteDomain}",
+        "id": "00000003-0000-0ff1-ce00-000000000000"
+    }
+}
