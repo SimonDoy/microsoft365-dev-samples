@@ -4,7 +4,7 @@ using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
 
-namespace i365.ConnectSync.Tasks.Extensions
+namespace i365.ReadReceipt.Tasks.Extensions
 {
     public static class HttpResponseDataExtensions
     {

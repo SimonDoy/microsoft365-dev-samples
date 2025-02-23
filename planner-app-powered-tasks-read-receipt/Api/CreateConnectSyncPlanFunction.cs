@@ -12,14 +12,11 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Azure.WebJobs.Extensions.Http;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
-using i365.ConnectSync.Tasks.Model;
+using i365.ReadReceipt.Tasks.Model;
 using System.Text.Json;
-using System.Net.Http.Json;
-using i365.ConnectSync.Tasks.Extensions;
 using Microsoft.Kiota.Abstractions.Serialization;
-using System.Xml.Linq;
 
-namespace i365.ConnectSync.Tasks
+namespace i365.ReadReceipt.Tasks
 {
     public class ConnectSyncPlanFunctions
     {
@@ -54,6 +51,8 @@ namespace i365.ConnectSync.Tasks
                 var clientId = _configuration.GetValue<string>("ClientId", "");
                 var clientSecret = _configuration.GetValue<string>("ClientSecret", "");
 
+                var businessScenarioName = _configuration.GetValue<string>("BusinessScenarioName", "");
+                string plannerName = _configuration.GetValue<string>("PlannerName", "");
                 string groupId = _configuration.GetValue<string>("Microsoft365GroupId", "");
                 BusinessScenarioGroupTarget theBusinessScenarioPlannerTaskTargetBase = new BusinessScenarioGroupTarget()
                 {
@@ -67,7 +66,7 @@ namespace i365.ConnectSync.Tasks
 
                 var graphClient = new GraphServiceClient(clientSecretCredential, scopes);
 
-                var businessScenarioName = "iThinkConnectSyncTasksDoyDev2025";
+                
                 var businessScenarios = await graphClient.Solutions.BusinessScenarios.GetAsync();
                 Microsoft.Graph.Beta.Models.BusinessScenario theBusinessScenario = null;
                 theBusinessScenario = businessScenarios.Value.FirstOrDefault(s => s.UniqueName == businessScenarioName);
@@ -95,7 +94,7 @@ namespace i365.ConnectSync.Tasks
                 {
                     log.LogInformation($"Plan created: {theBusinessScenarioPlanReference.Id}");
                     // update plan if the plan has the wrong name.
-                    string plannerName = "Connect Sync Task Test";
+                    
                     var theBusinessScenarioPlanConfiguration = await graphClient.Solutions.BusinessScenarios[theBusinessScenario.Id].Planner.PlanConfiguration.GetAsync();
                     log.LogInformation($"Plan Configuration: {theBusinessScenarioPlanConfiguration.Id}");
 
@@ -183,27 +182,6 @@ namespace i365.ConnectSync.Tasks
             }
         }
 
-        [FunctionName("Test")]
-        public async Task<IActionResult> Test(
-           [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "test")] HttpRequest req,
-           ILogger log)
-        {
-            log.LogInformation($"Test");
-            ActionResult result = new StatusCodeResult(StatusCodes.Status500InternalServerError);
-            try
-            {
-                var jsonObject = new ReadReceiptTaskResponse();
-                result = new OkObjectResult(jsonObject);
-            }
-            catch (Exception ex)
-            {
-                log.LogError($"Error searching for task: {ex.Message}");
-                result = new StatusCodeResult(StatusCodes.Status500InternalServerError);
-            }
-
-            return result;
-        }
-
         // Existing functions...
         [FunctionName("CreateBusinessScenarioTask")]
         public async Task<IActionResult> CreateBusinessScenarioTask(
@@ -229,6 +207,7 @@ namespace i365.ConnectSync.Tasks
                 var clientSecret = _configuration.GetValue<string>("ClientSecret", "");
                 var inDevelopmentMode = _configuration.GetValue<bool>("InDeveloperMode", false);
                 var teamsAppId = _configuration.GetValue<string>("TeamsTaskAppId", "");
+                var businessScenarioName = _configuration.GetValue<string>("BusinessScenarioName", "");
 
                 if (String.IsNullOrEmpty(tenantId) || String.IsNullOrEmpty(clientId) || String.IsNullOrEmpty(clientSecret))
                 {
@@ -238,7 +217,6 @@ namespace i365.ConnectSync.Tasks
                 var clientSecretCredential = new ClientSecretCredential(tenantId, clientId, clientSecret, options);
                 var graphClient = new GraphServiceClient(clientSecretCredential, scopes);
 
-                var businessScenarioName = "iThinkConnectSyncTasksDoyDev2025";
                 var businessScenarios = await graphClient.Solutions.BusinessScenarios.GetAsync();
                 var theBusinessScenario = businessScenarios.Value.FirstOrDefault(s => s.UniqueName == businessScenarioName);
 
@@ -377,11 +355,11 @@ namespace i365.ConnectSync.Tasks
                 var tenantId = _configuration.GetValue<string>("TenantId", "");
                 var clientId = _configuration.GetValue<string>("ClientId", "");
                 var clientSecret = _configuration.GetValue<string>("ClientSecret", "");
+                var businessScenarioName = _configuration.GetValue<string>("BusinessScenarioName", "");
 
                 var clientSecretCredential = new ClientSecretCredential(tenantId, clientId, clientSecret, options);
                 var graphClient = new GraphServiceClient(clientSecretCredential, scopes);
 
-                var businessScenarioName = "iThinkConnectSyncTasksDoyDev2025";
                 var businessScenarios = await graphClient.Solutions.BusinessScenarios.GetAsync();
                 var theBusinessScenario = businessScenarios.Value.FirstOrDefault(s => s.UniqueName == businessScenarioName);
 
@@ -499,11 +477,15 @@ namespace i365.ConnectSync.Tasks
                 var tenantId = _configuration.GetValue<string>("TenantId", "");
                 var clientId = _configuration.GetValue<string>("ClientId", "");
                 var clientSecret = _configuration.GetValue<string>("ClientSecret", "");
+                var businessScenarioName = _configuration.GetValue<string>("BusinessScenarioName", "");
+
+                //update with your test user object id.
+                var testUserUPN = _configuration.GetValue<string>("TestUserUserPrincipalName", ""); ;
+                
 
                 var clientSecretCredential = new ClientSecretCredential(tenantId, clientId, clientSecret, options);
                 var graphClient = new GraphServiceClient(clientSecretCredential, scopes);
 
-                var businessScenarioName = "iThinkConnectSyncTasksDoyDev2025";
                 var businessScenarios = await graphClient.Solutions.BusinessScenarios.GetAsync();
                 var theBusinessScenario = businessScenarios.Value.FirstOrDefault(s => s.UniqueName == businessScenarioName);
 
@@ -538,7 +520,8 @@ namespace i365.ConnectSync.Tasks
                     OrderHint = " !",
                 };
 
-                var userObjectId = "9a99c90f-1eaa-4f94-b9d3-74a6b3558ef6";
+                var user = await graphClient.Users[testUserUPN].GetAsync();
+                var userObjectId = user.Id;
                 var taskAssignments = new PlannerAssignments();
                 if (!taskToUpdate.Assignments.AdditionalData.ContainsKey(userObjectId))
                 {
@@ -614,11 +597,11 @@ namespace i365.ConnectSync.Tasks
                 var tenantId = _configuration.GetValue<string>("TenantId", "");
                 var clientId = _configuration.GetValue<string>("ClientId", "");
                 var clientSecret = _configuration.GetValue<string>("ClientSecret", "");
+                var businessScenarioName = _configuration.GetValue<string>("BusinessScenarioName", "");
 
                 var clientSecretCredential = new ClientSecretCredential(tenantId, clientId, clientSecret, options);
                 var graphClient = new GraphServiceClient(clientSecretCredential, scopes);
 
-                var businessScenarioName = "iThinkConnectSyncTasksDoyDev2025";
                 var businessScenarios = await graphClient.Solutions.BusinessScenarios.GetAsync();
                 var theBusinessScenario = businessScenarios.Value.FirstOrDefault(s => s.UniqueName == businessScenarioName);
 

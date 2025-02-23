@@ -7,9 +7,9 @@ using System.IO;
 using System.Text.Json.Serialization;
 using System.Text.Json;
 
-[assembly: FunctionsStartup(typeof(i365.ConnectSync.Tasks.Startup))]
+[assembly: FunctionsStartup(typeof(i365.ReadReceipt.Tasks.Startup))]
 
-namespace i365.ConnectSync.Tasks;
+namespace i365.ReadReceipt.Tasks;
 
 public class Startup : FunctionsStartup
 {

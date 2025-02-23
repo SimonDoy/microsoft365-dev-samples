@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace i365.ConnectSync.Tasks.Model
+namespace i365.ReadReceipt.Tasks.Model
 {
     public class ReadReceiptTaskResponse
     {
