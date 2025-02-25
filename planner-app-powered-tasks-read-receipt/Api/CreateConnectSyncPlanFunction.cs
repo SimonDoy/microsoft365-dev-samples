@@ -105,8 +105,8 @@ namespace i365.ReadReceipt.Tasks
                     }
 
                     bool planConfigurationNeedsUpdating = false;
-                    var watchBucketName = "To Watch";
-                    var planBucketNames = new string[] { "To Watch", "Watched" };
+                    var readBucketName = "To Read";
+                    var planBucketNames = new string[] { "To Read", "Read" };
                     var enUSLocatization = theBusinessScenarioPlanConfiguration.Localizations.FirstOrDefault(l => l.LanguageTag == "en-us");
                     if (enUSLocatization == null)
                     {
@@ -208,6 +208,7 @@ namespace i365.ReadReceipt.Tasks
                 var inDevelopmentMode = _configuration.GetValue<bool>("InDeveloperMode", false);
                 var teamsAppId = _configuration.GetValue<string>("TeamsTaskAppId", "");
                 var businessScenarioName = _configuration.GetValue<string>("BusinessScenarioName", "");
+                var sharePointHostName = _configuration.GetValue<string>("SharePointHostName", "");
 
                 if (String.IsNullOrEmpty(tenantId) || String.IsNullOrEmpty(clientId) || String.IsNullOrEmpty(clientSecret))
                 {
@@ -231,14 +232,14 @@ namespace i365.ReadReceipt.Tasks
                     var completedByUser = await graphClient.Users[readReceiptTaskResponse.UserPrincipalName].GetAsync();
 
                     string groupId = _configuration.GetValue<string>("Microsoft365GroupId", "");
-                    var watchBucketName = "To Watch";
+                    var readBucketName = "To Read";
                     
 
                     var teamsAppExternalObjectId = readReceiptTaskResponse.ExternalId;
                     var teamsAppTaskTitle = $"Confirm You Have Read Content {readReceiptTaskResponse.ContentTitle}"; // do not include the word task in your title. do not include # in your title.
                     var teamsTabEntityId = "fac21461-7439-49d1-a2ce-f5ab67b67a91";
-                    var teamsAppDevelopmentLinkUrl = $"https://ithinksharepointltd.sharepoint.com/_layouts/15/TeamsWorkBench.aspx?componentId=fac21461-7439-49d1-a2ce-f5ab67b67a91&subEntityId={teamsAppExternalObjectId}&teams&personal&forceLocale=en-gb&loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js";
-                    var teamsAppLinkUrl = $"https://ithinksharepointltd.sharepoint.com/_layouts/15/teamshostedapp.aspx?componentId=fac21461-7439-49d1-a2ce-f5ab67b67a91&subEntityId={teamsAppExternalObjectId}&teams&personal&forceLocale=en-gb&loadSPFX=true";
+                    var teamsAppDevelopmentLinkUrl = $"https://{sharePointHostName}.sharepoint.com/_layouts/15/TeamsWorkBench.aspx?componentId=fac21461-7439-49d1-a2ce-f5ab67b67a91&subEntityId={teamsAppExternalObjectId}&teams&personal&forceLocale=en-gb&loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js";
+                    var teamsAppLinkUrl = $"https://{sharePointHostName}.sharepoint.com/_layouts/15/teamshostedapp.aspx?componentId=fac21461-7439-49d1-a2ce-f5ab67b67a91&subEntityId={teamsAppExternalObjectId}&teams&personal&forceLocale=en-gb&loadSPFX=true";
                     if (inDevelopmentMode)
                     {
                         teamsAppLinkUrl = teamsAppDevelopmentLinkUrl;
@@ -305,7 +306,7 @@ namespace i365.ReadReceipt.Tasks
                         BusinessScenarioProperties = new BusinessScenarioProperties
                         {
                             ExternalObjectId = teamsAppExternalObjectId,
-                            ExternalBucketId = watchBucketName,
+                            ExternalBucketId = readBucketName,
                         },
                         Details = new PlannerTaskDetails
                         {

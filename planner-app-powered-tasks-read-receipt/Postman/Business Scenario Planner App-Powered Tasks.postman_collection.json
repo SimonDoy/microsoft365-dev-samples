@@ -1,0 +1,198 @@
+{
+	"info": {
+		"_postman_id": "d90d612b-e643-416b-b42d-17dab45eb94b",
+		"name": "Business Scenario Planner App-Powered Tasks",
+		"description": "These set of requests are provided to setup a Microsoft Planner Business Scenario that is powered with App-Powered Tasks.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3632237",
+		"_collection_link": "https://gold-eclipse-547498.postman.co/workspace/Microsoft-Teams-Stuff~839f50a6-dba2-4471-8c8a-8ad533b4b889/collection/3632237-d90d612b-e643-416b-b42d-17dab45eb94b?action=share&source=collection_link&creator=3632237"
+	},
+	"item": [
+		{
+			"name": "KickLocalTimerJob",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7165/admin/functions/CreateConnectSyncPlanFunction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7165",
+					"path": [
+						"admin",
+						"functions",
+						"CreateConnectSyncPlanFunction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SearchBusinessScenarioTask",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"taskTargetKind\": \"group\",\r\n    \"groupId\": \"9ec65105-f6b9-4f89-bd27-c2f98a3530ad\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7165/api/tasks/search/{{externalTaskId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7165",
+					"path": [
+						"api",
+						"tasks",
+						"search",
+						"{{externalTaskId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateBusinessScenarioTask",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"businessScenarioProperties\": {\r\n        \"additionalData\": {},\r\n        \"backingStore\": {\r\n            \"returnOnlyChangedValues\": false,\r\n            \"initializationCompleted\": false\r\n        },\r\n        \"externalBucketId\": \"To Watch\",\r\n        \"externalContextId\": null,\r\n        \"externalObjectId\": \"Order#12023\",\r\n        \"externalObjectVersion\": null,\r\n        \"odataType\": null,\r\n        \"webUrl\": null\r\n    },\r\n    \"target\": {\r\n        \"groupId\": \"9ec65105-f6b9-4f89-bd27-c2f98a3530ad\",\r\n        \"additionalData\": {},\r\n        \"backingStore\": {\r\n            \"returnOnlyChangedValues\": false,\r\n            \"initializationCompleted\": false\r\n        },\r\n        \"odataType\": \"#microsoft.graph.businessScenarioGroupTarget\",\r\n        \"taskTargetKind\": 0\r\n    },\r\n    \"activeChecklistItemCount\": 0,\r\n    \"appliedCategories\": {\r\n        \"additionalData\": {},\r\n        \"backingStore\": {\r\n            \"returnOnlyChangedValues\": false,\r\n            \"initializationCompleted\": false\r\n        },\r\n        \"odataType\": null\r\n    },\r\n    \"archivalInfo\": null,\r\n    \"assignedToTaskBoardFormat\": null,\r\n    \"assigneePriority\": \"\",\r\n    \"assignments\": {\r\n        \"additionalData\": {},\r\n        \"backingStore\": {\r\n            \"returnOnlyChangedValues\": false,\r\n            \"initializationCompleted\": false\r\n        },\r\n        \"odataType\": null\r\n    },\r\n    \"bucketId\": \"3hp0Bxe_iUeRJMAwJFjeo5YAIPJ8\",\r\n    \"bucketTaskBoardFormat\": null,\r\n    \"checklistItemCount\": 0,\r\n    \"completedBy\": null,\r\n    \"completedDateTime\": null,\r\n    \"conversationThreadId\": null,\r\n    \"createdBy\": {\r\n        \"additionalData\": {},\r\n        \"application\": {\r\n            \"additionalData\": {},\r\n            \"backingStore\": {\r\n                \"returnOnlyChangedValues\": false,\r\n                \"initializationCompleted\": false\r\n            },\r\n            \"displayName\": null,\r\n            \"id\": \"21704cd8-b0af-4ebf-bed2-24a61a291aa7\",\r\n            \"odataType\": null\r\n        },\r\n        \"backingStore\": {\r\n            \"returnOnlyChangedValues\": false,\r\n            \"initializationCompleted\": false\r\n        },\r\n        \"device\": null,\r\n        \"odataType\": null,\r\n        \"user\": null\r\n    },\r\n    \"createdDateTime\": \"2025-02-15T08:28:49.9925431+00:00\",\r\n    \"creationSource\": {\r\n        \"contextScenarioId\": \"com.microsoft.businessExtensibility/8fec55fda88c41da9170ba73ea60abf3\",\r\n        \"displayLinkType\": 0,\r\n        \"displayNameSegments\": [],\r\n        \"externalContextId\": null,\r\n        \"externalObjectId\": \"Order#12023\",\r\n        \"externalObjectVersion\": null,\r\n        \"webUrl\": null,\r\n        \"additionalData\": {},\r\n        \"backingStore\": {\r\n            \"returnOnlyChangedValues\": false,\r\n            \"initializationCompleted\": false\r\n        },\r\n        \"creationSourceKind\": 1,\r\n        \"odataType\": \"#microsoft.graph.plannerExternalTaskSource\",\r\n        \"teamsPublicationInfo\": null\r\n    },\r\n    \"details\": null,\r\n    \"dueDateTime\": \"2025-02-16T08:28:47.3475049+00:00\",\r\n    \"hasDescription\": false,\r\n    \"isArchived\": false,\r\n    \"isOnMyDay\": false,\r\n    \"isOnMyDayLastModifiedDate\": null,\r\n    \"lastModifiedBy\": {\r\n        \"additionalData\": {},\r\n        \"application\": {\r\n            \"additionalData\": {},\r\n            \"backingStore\": {\r\n                \"returnOnlyChangedValues\": false,\r\n                \"initializationCompleted\": false\r\n            },\r\n            \"displayName\": null,\r\n            \"id\": \"21704cd8-b0af-4ebf-bed2-24a61a291aa7\",\r\n            \"odataType\": null\r\n        },\r\n        \"backingStore\": {\r\n            \"returnOnlyChangedValues\": false,\r\n            \"initializationCompleted\": false\r\n        },\r\n        \"device\": null,\r\n        \"odataType\": null,\r\n        \"user\": null\r\n    },\r\n    \"lastModifiedDateTime\": \"2025-02-15T08:28:49.9925431+00:00\",\r\n    \"orderHint\": \"8584619987554850376\",\r\n    \"percentComplete\": 50,\r\n    \"planId\": \"Klp4YS8C_Ei78JJMjOmdJJYAEdVG\",\r\n    \"previewType\": 0,\r\n    \"priority\": 5,\r\n    \"progressTaskBoardFormat\": null,\r\n    \"recurrence\": null,\r\n    \"referenceCount\": 1,\r\n    \"specifiedCompletionRequirements\": 4,\r\n    \"startDateTime\": \"2025-02-15T08:28:47.3259956+00:00\",\r\n    \"title\": \"Complete Read Receipt\",\r\n    \"additionalData\": {\r\n        \"@odata.etag\": \"W/\\\"JzEtU2NlbmFyaW9UYXNrQEBAQEBAQEBAQEBAQEBARCc=\\\"\",\r\n        \"internalProperties\": null\r\n    },\r\n    \"backingStore\": {\r\n        \"returnOnlyChangedValues\": false,\r\n        \"initializationCompleted\": false\r\n    },\r\n    \"id\": \"C_jvxXOgg02i5yGecWJq45YAADuk\",\r\n    \"odataType\": null\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7165/api/tasks/{{externalTaskId}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7165",
+					"path": [
+						"api",
+						"tasks",
+						"{{externalTaskId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CreateBusinessScenarioTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"externalId\":\"Confirm-Content-Read-1008-sdoy\",\r\n    \"userPrincipalName\":\"bob@domain.co.uk\",\r\n    \"contentTitle\": \"Guide to iThink 365\",\r\n    \"contentUrl\": \"https://ithinksharepointltd.sharepoint.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7165/api/tasks",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7165",
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CompleteReadReceiptBusinessScenarioTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"externalId\":\"Confirm-Content-Read-1007-sdoy\",\r\n    \"userPrincipalName\":\"bob@domain.co.uk\",\r\n    \"understandingLevel\":\"I fully understand the content\",\r\n    \"hasReadContent\": true,\r\n    \"confirmationDate\": \"2025-02-17T00:00:00Z\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:7165/api/tasks/Order%2312037/complete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "7165",
+					"path": [
+						"api",
+						"tasks",
+						"Order%2312037",
+						"complete"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "externalTaskId",
+			"value": "Order%2312023",
+			"type": "string"
+		}
+	]
+}
