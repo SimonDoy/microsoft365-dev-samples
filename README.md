@@ -9,4 +9,5 @@ The application is a demo and makes up part of a solution. You can read more abo
 
 ## Custom MCP Server as Azure-hosted Container Sample
 This sample has a Visual Studio .NET project, which shows a simple MCP Server which can then be deployed to Azure as a container within an Azure Container Registry and deployed to Azure App Service.
+
 [Get the code](./copilot-mcp-azure-containers/README.md)
