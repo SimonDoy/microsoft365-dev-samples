@@ -5,7 +5,9 @@ For more information about the process please check out [this blog post](https:/
 
 ## Visual Studio Solution
 
-The following code base provides a very simple MCP server, its purpose is to allow you to see how to configure the Visual Studio Project to enable publishing the code as a container to Azure Container Repository.
+The following code base provides a very simple MCP server; its purpose is to allow you to see how to configure the Visual Studio Project to enable publishing the code as a container to an Azure Container Repository.
+[Check out the Simple MCP Server project](./copilot-mcp-azure-containers/README.md)
+
 
 
 ## Dev Ops Pipelines
