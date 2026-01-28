@@ -12,5 +12,5 @@ The following code base provides a very simple MCP server; its purpose is to all
 
 ## Dev Ops Pipelines
 The following pipelines are provided to help you get started with building and deploying the MCP server container to Azure Container Repository and then deploying it to Azure App Services.
-
+[Check out the Dev Ops Pipelines](./copilot-mcp-azure-containers/dev-ops/README.md)
 
