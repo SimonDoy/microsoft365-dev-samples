@@ -133,3 +133,8 @@ dist
 #Simon's Additions
 *.pubxml
 *.zip
+
+**/.vs/**
+**/bin/**
+**/obj/**
+*.user
