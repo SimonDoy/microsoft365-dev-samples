@@ -1,0 +1,91 @@
+# iThink 365 Mcp Container Build Pipeline
+# Created by Simon Doy
+# Last Modified: 26th January 2026
+
+trigger:
+  branches:
+    include:
+    - main
+    - feature*
+    - releases/*
+    exclude:
+    - releases/old*
+    - dev-ops/**
+
+
+name: "$(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)"
+variables:
+  - name: buildConfiguration
+    value: 'Release'
+  - name: apiProjectPath
+    value: 'i365.Mcp.EchoMCPServer.csproj'
+  - name: apiProjectRoot
+    value: 'copilot-mcp-build-pipeline/solution'
+  - name: containerImageName
+    value: 'container-mcp-image'
+  
+
+
+stages:
+  - stage: buildCodeAndPublish
+    jobs:
+    - job: 'buildCodeAndPublish'
+      pool:
+        vmImage: 'windows-latest'
+      steps:
+          - task: UseDotNet@2
+            displayName: 'Install .NET Core 10.x SDK'
+            inputs:
+              version: 10.x
+              performMultiLevelLookup: true
+
+
+          - script: |
+              mkdir 'binaries'
+              dotnet restore
+              dotnet build $(apiProjectPath) --configuration $(buildConfiguration) 
+              dotnet publish $(apiProjectPath) --configuration $(buildConfiguration) /t:PublishContainer --os linux --arch x64 -p ContainerArchiveOutputPath=$(Build.ArtifactStagingDirectory)/image/$(containerImageName).tar.gz
+            displayName: 'Build Mcp Api Project - dotnet publish --configuration $(buildConfiguration) container image $(containerImageName).tar.gz'
+            workingDirectory: '$(Build.SourcesDirectory)/$(apiProjectRoot)'
+
+          - task: CopyFiles@2
+            displayName: 'Copy Project Outputs'
+            inputs:
+              SourceFolder: '$(Build.SourcesDirectory)/$(apiProjectRoot)/bin/$(buildConfiguration)'
+              Contents: '**'
+              TargetFolder: '$(Build.ArtifactStagingDirectory)/binaries'
+              OverWrite: true
+
+          - task: CopyFiles@2
+            displayName: 'Copy Project Files'
+            inputs:
+              SourceFolder: '$(apiProjectRoot)'
+              Contents: '**'
+              TargetFolder: '$(Build.ArtifactStagingDirectory)/project'
+              OverWrite: true
+
+          - task: DotNetCoreCLI@2
+            displayName: 'Execute Unit Tests'
+            inputs:
+              command: 'test'
+              projects: '**/*UnitTest*/*.csproj'
+              arguments: '--configuration $(buildConfiguration)'
+              testRunTitle: 'Execute Unit Tests'
+
+          - task: PublishTestResults@2
+            displayName: 'Publish Unit Test Results'
+            inputs:
+              testResultsFormat: 'NUnit'
+              testResultsFiles: '**/TEST-*.xml'
+
+          - task: PublishBuildArtifacts@1
+            displayName: 'Publish Artifacts'
+            inputs:
+              PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+              ArtifactName: 'drop'
+              publishLocation: 'Container'
+          
+          - task: tagBuildOrRelease@0
+            inputs:
+              type: 'Build'
+              tags: '$(Build.SourceBranchName)'
