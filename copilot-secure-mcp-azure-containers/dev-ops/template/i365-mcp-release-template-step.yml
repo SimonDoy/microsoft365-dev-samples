@@ -1,0 +1,91 @@
+# Deploys Container to Repostory.
+# Requires build variables to authenticate to the Azure Container Registry.
+# DOTNET_CONTAINER_REGISTRY_UNAME
+# DOTNET_CONTAINER_REGISTRY_PWORD
+
+parameters:
+- name: 'azureSubscriptionName'
+  default: ''
+  type: string 
+- name: 'mcpProjectPath'
+  default: ''
+  type: string
+# Download pipeline artifacts
+# Download build and pipeline artifacts
+steps:
+- task: PowerShell@2
+  displayName: 'List files in directory'
+  enabled: true
+  inputs:
+    workingDirectory: '$(Pipeline.Workspace)'
+    targetType: 'inline'
+    script: |
+      # list items
+      Get-ChildItem -Path . -Recurse
+
+- task: PowerShell@2
+  displayName: Set the name of the build (i.e. the Build.BuildNumber)
+  inputs:
+    targetType: 'inline'
+    script: |
+      [string] $buildName = "$(versionNumber)_$(Build.SourceBranchName)"
+      Write-Host "Setting the buildNumber to '$(versionNumber)'."
+      Write-Host "##vso[build.updatebuildnumber]$(versionNumber)"
+      ##vso[build.updatebuildnumber]$(versionNumber)
+      Write-Host "Tagging build with '$($buildName)'."
+      Write-Host "##vso[build.addbuildtag]$buildName"
+      ##vso[release.addbuildtag]$buildName
+      Write-Host "##vso[build.addbuildtag]$(Build.SourceBranchName)"
+      ##vso[release.addbuildtag]$(Build.SourceBranchName)
+
+- task: PowerShell@2
+  displayName: Set application release information
+  inputs:
+    targetType: 'inline'
+    script: |
+      $releaseDate = Get-Date;
+      Write-Host "Setting the release date to '$releaseDate'."
+      ##vso[release.deployment_startTime]$($releaseDate.ToString("o"))
+      Write-Host "##vso[task.setvariable variable=release.deployment_startTime;isOutput=true]$releaseDate.ToString('o')"
+- task: UseDotNet@2
+  displayName: 'Install .NET Core 9.x SDK'
+  inputs:
+    version: 9.x
+    performMultiLevelLookup: true
+
+- script: |
+    dotnet publish ${{ parameters.mcpProjectPath }} --configuration $(buildConfiguration) /t:PublishContainer --os linux --arch x64 -p ContainerRegistry=$(AzureContainerRepositoryName)
+  displayName: 'Build Mcp Api Project - dotnet publish --configuration $(buildConfiguration)'
+  workingDirectory: '$(Pipeline.Workspace)/api/drop/project'
+  
+- task: AzureAppServiceSettings@1
+  displayName: 'Azure App Service Settings: $(AzureAppServiceName)'
+  enabled: true
+  inputs:
+    azureSubscription: '${{ parameters.azureSubscriptionName }}'
+    appName: '$(AzureAppServiceName)'
+    resourceGroupName: '$(AzureResourceGroupName)'
+    appSettings: |
+      [
+      {
+      "name":"Values_Environment",
+      "value":"Development",
+      "slotSetting": false
+      },
+      {
+      "name":"WEBSITES_PORT",
+      "value":"8080",
+      "slotSetting": false
+      },
+      {
+      "name":"WEBSITES_ENABLE_APP_SERVICE_STORAGE",
+      "value":"true",
+      "slotSetting": false
+      },
+      {
+      "name":"Values_AzureWebJobsStorage",
+      "value":"$(AzureBlobStorageConnectionString)",
+      "slotSetting": false
+      }
+      
+      ]
