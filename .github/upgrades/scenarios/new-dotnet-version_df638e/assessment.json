@@ -1,0 +1,1148 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-05-27T14:57:38.1119071Z",
+  "analysisEndTime": "2026-05-27T14:57:40.5947736Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 1,
+      "issues": 5,
+      "incidents": 42,
+      "effort": 42
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 2,
+        "Optional": 0,
+        "Potential": 40,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 2,
+        "Project": 1,
+        "Api": 39
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "i365.Mcp.EchoMCPServer.csproj",
+      "startingProject": true,
+      "issues": 5,
+      "storyPoints": 42,
+      "properties": {
+        "appName": "i365.Mcp.EchoMCPServer",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net9.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 2,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 270,
+        "linesOfCode": 270,
+        "totalApiScanned": 451,
+        "minLinesOfCodeToChange": 39,
+        "maxLinesOfCodeToChange": 39
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "4aebeeba-c6a8-4477-9740-83a038ff3af7",
+          "ruleId": "NuGet.0002",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.Authentication.JwtBearer, 9.0.8\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.8",
+              "protected": "Microsoft.AspNetCore.Authentication.JwtBearer, 9.0.8\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.8"
+            },
+            "kind": "File",
+            "path": "i365.Mcp.EchoMCPServer.csproj",
+            "snippet": "Microsoft.AspNetCore.Authentication.JwtBearer, 9.0.8\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.8",
+            "protectedSnippet": "Microsoft.AspNetCore.Authentication.JwtBearer, 9.0.8\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.Authentication.JwtBearer, and replace with new package Microsoft.AspNetCore.Authentication.JwtBearer 10.0.8",
+            "label": "Microsoft.AspNetCore.Authentication.JwtBearer 9.0.8",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageVersion": "9.0.8",
+              "PackageNewVersion": "10.0.8",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "b9d0483f-6f8e-40d7-bf3c-6d2e26db5472",
+          "ruleId": "NuGet.0002",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Extensions.Hosting, 10.0.2\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting, and replace with new package Microsoft.Extensions.Hosting 10.0.8",
+              "protected": "Microsoft.Extensions.Hosting, 10.0.2\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting, and replace with new package Microsoft.Extensions.Hosting 10.0.8"
+            },
+            "kind": "File",
+            "path": "i365.Mcp.EchoMCPServer.csproj",
+            "snippet": "Microsoft.Extensions.Hosting, 10.0.2\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting, and replace with new package Microsoft.Extensions.Hosting 10.0.8",
+            "protectedSnippet": "Microsoft.Extensions.Hosting, 10.0.2\n\nRecommendation:\n\nRemove Microsoft.Extensions.Hosting, and replace with new package Microsoft.Extensions.Hosting 10.0.8",
+            "label": "Microsoft.Extensions.Hosting 10.0.2",
+            "properties": {
+              "PackageId": "Microsoft.Extensions.Hosting",
+              "PackageVersion": "10.0.2",
+              "PackageNewVersion": "10.0.8",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "0f3b6cb5-48ba-4a59-829c-fb2a6b219fc2",
+          "ruleId": "Project.0002",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net9.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net9.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "i365.Mcp.EchoMCPServer.csproj",
+            "snippet": "Current target framework: net9.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net9.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net9.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "83d648d1-18c6-4cc3-8691-15dbdc8b018b",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Scope.Add(requiredScope);",
+              "protected": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Scope.Add(requiredScope);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope",
+            "label": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 149,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "5cafcc01-7cbb-4921-ae46-072b38b54401",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Scope.Add(\u0022offline_access\u0022);",
+              "protected": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Scope.Add(\u0022offline_access\u0022);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope",
+            "label": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 146,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "36380509-1c47-4420-b8b8-ebe9ab30b48e",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Scope.Add(\u0022profile\u0022);",
+              "protected": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Scope.Add(\u0022profile\u0022);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope",
+            "label": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 145,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "9ca4387f-8ee6-4a74-9827-187bd8019a46",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Scope.Add(\u0022openid\u0022);",
+              "protected": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Scope.Add(\u0022openid\u0022);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope",
+            "label": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 144,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "d886b5cf-e428-4e5a-b5ac-5cc703607e60",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Scope.Clear();",
+              "protected": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Scope.Clear();",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope",
+            "label": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Scope",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 143,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "b198c854-bd5e-4d87-bbf1-8b59ae4761e5",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.GetClaimsFromUserInfoEndpoint = true;",
+              "protected": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.GetClaimsFromUserInfoEndpoint"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.GetClaimsFromUserInfoEndpoint = true;",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.GetClaimsFromUserInfoEndpoint",
+            "label": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.GetClaimsFromUserInfoEndpoint",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 142,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "569be3a6-98f1-412b-9bbe-23adf0a48685",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.ResponseType = \u0022code\u0022;",
+              "protected": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.ResponseType"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.ResponseType = \u0022code\u0022;",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.ResponseType",
+            "label": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.ResponseType",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 140,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "b6e41105-2133-4e72-8d67-64c956ad1203",
+          "ruleId": "Api.0001",
+          "description": "Breaking change: DynamicallyAccessedMembers annotation removed from trim-unsafe configuration APIs ",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.ClientId = builder.Configuration.GetValue\u003Cstring?\u003E(\u0022AzureAd:ClientId\u0022);",
+              "protected": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration,System.String)"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.ClientId = builder.Configuration.GetValue\u003Cstring?\u003E(\u0022AzureAd:ClientId\u0022);",
+            "protectedSnippet": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration,System.String)",
+            "label": "M:Microsoft.Extensions.Configuration.ConfigurationBinder.GetValue\u0060\u00601(Microsoft.Extensions.Configuration.IConfiguration,System.String)",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/dynamically-accessed-members-configuration.md",
+                "isCustom": false
+              }
+            ],
+            "line": 139,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "7f4de726-f7bb-4032-a534-968315835e6f",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.ClientId = builder.Configuration.GetValue\u003Cstring?\u003E(\u0022AzureAd:ClientId\u0022);",
+              "protected": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.ClientId"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.ClientId = builder.Configuration.GetValue\u003Cstring?\u003E(\u0022AzureAd:ClientId\u0022);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.ClientId",
+            "label": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.ClientId",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 139,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "9792c0d7-ebe0-4c59-8577-6cbbcce6afdc",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Authority = authorizationServerUrl;",
+              "protected": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Authority"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Authority = authorizationServerUrl;",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Authority",
+            "label": "P:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectOptions.Authority",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 138,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "f4a58e4a-8788-4bd0-bc90-6db135d477b4",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.Configure\u003COpenIdConnectOptions\u003E(OpenIdConnectDefaults.AuthenticationScheme, options =\u003E\r\n{\r\n    options.Authority = authorizationServerUrl;\r\n    options.ClientId = builder.Configuration.GetValue\u003Cstring?\u003E(\u0022AzureAd:ClientId\u0022);\r\n    options.ResponseType = \u0022code\u0022;\r\n    options.SaveTokens = true;\r\n    options.GetClaimsFromUserInfoEndpoint = true;\r\n    options.Scope.Clear();\r\n    options.Scope.Add(\u0022openid\u0022);\r\n    options.Scope.Add(\u0022profile\u0022);\r\n    options.Scope.Add(\u0022offline_access\u0022);\r\n    if (!string.IsNullOrEmpty(requiredScope))\r\n    {\r\n        options.Scope.Add(requiredScope);\r\n    }\r\n});",
+              "protected": "T:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectDefaults"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.Services.Configure\u003COpenIdConnectOptions\u003E(OpenIdConnectDefaults.AuthenticationScheme, options =\u003E\r\n{\r\n    options.Authority = authorizationServerUrl;\r\n    options.ClientId = builder.Configuration.GetValue\u003Cstring?\u003E(\u0022AzureAd:ClientId\u0022);\r\n    options.ResponseType = \u0022code\u0022;\r\n    options.SaveTokens = true;\r\n    options.GetClaimsFromUserInfoEndpoint = true;\r\n    options.Scope.Clear();\r\n    options.Scope.Add(\u0022openid\u0022);\r\n    options.Scope.Add(\u0022profile\u0022);\r\n    options.Scope.Add(\u0022offline_access\u0022);\r\n    if (!string.IsNullOrEmpty(requiredScope))\r\n    {\r\n        options.Scope.Add(requiredScope);\r\n    }\r\n});",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectDefaults",
+            "label": "T:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectDefaults",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 136,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "67c035e2-5c57-4cab-9020-07410e5fcced",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.OpenIdConnect, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.Configure\u003COpenIdConnectOptions\u003E(OpenIdConnectDefaults.AuthenticationScheme, options =\u003E\r\n{\r\n    options.Authority = authorizationServerUrl;\r\n    options.ClientId = builder.Configuration.GetValue\u003Cstring?\u003E(\u0022AzureAd:ClientId\u0022);\r\n    options.ResponseType = \u0022code\u0022;\r\n    options.SaveTokens = true;\r\n    options.GetClaimsFromUserInfoEndpoint = true;\r\n    options.Scope.Clear();\r\n    options.Scope.Add(\u0022openid\u0022);\r\n    options.Scope.Add(\u0022profile\u0022);\r\n    options.Scope.Add(\u0022offline_access\u0022);\r\n    if (!string.IsNullOrEmpty(requiredScope))\r\n    {\r\n        options.Scope.Add(requiredScope);\r\n    }\r\n});",
+              "protected": "F:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectDefaults.AuthenticationScheme"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.Services.Configure\u003COpenIdConnectOptions\u003E(OpenIdConnectDefaults.AuthenticationScheme, options =\u003E\r\n{\r\n    options.Authority = authorizationServerUrl;\r\n    options.ClientId = builder.Configuration.GetValue\u003Cstring?\u003E(\u0022AzureAd:ClientId\u0022);\r\n    options.ResponseType = \u0022code\u0022;\r\n    options.SaveTokens = true;\r\n    options.GetClaimsFromUserInfoEndpoint = true;\r\n    options.Scope.Clear();\r\n    options.Scope.Add(\u0022openid\u0022);\r\n    options.Scope.Add(\u0022profile\u0022);\r\n    options.Scope.Add(\u0022offline_access\u0022);\r\n    if (!string.IsNullOrEmpty(requiredScope))\r\n    {\r\n        options.Scope.Add(requiredScope);\r\n    }\r\n});",
+            "protectedSnippet": "F:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectDefaults.AuthenticationScheme",
+            "label": "F:Microsoft.AspNetCore.Authentication.OpenIdConnect.OpenIdConnectDefaults.AuthenticationScheme",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.OpenIdConnect",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 136,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "bd866483-a6c5-4a41-bdbb-3520564f1e18",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await existingEvents.OnForbidden(context);",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnForbidden"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "await existingEvents.OnForbidden(context);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnForbidden",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnForbidden",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 129,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "9e1ff592-82d8-4813-9ca3-433aa3c3d81e",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnForbidden"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnForbidden",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnForbidden",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 127,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "75c673a1-f91e-435b-9b02-b9a215f824b9",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnForbidden"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnForbidden",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnForbidden",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 40,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "2c2cf26e-0174-4df0-a323-8a06b7c5e538",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await existingEvents.OnChallenge(context);",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnChallenge"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "await existingEvents.OnChallenge(context);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnChallenge",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnChallenge",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 111,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "235e9be8-d6b5-432e-8a83-5228e918ebbf",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnChallenge"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnChallenge",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnChallenge",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 109,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "62f905a7-310d-415d-89a9-b555f4bd636c",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerChallengeContext.ErrorDescription"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerChallengeContext.ErrorDescription",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerChallengeContext.ErrorDescription",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 103,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "55347770-95ee-4049-be89-f2312182336b",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerChallengeContext.Error"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerChallengeContext.Error",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerChallengeContext.Error",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 103,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "1ce705ad-b05f-4db8-9423-e15ce8e772f3",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnChallenge"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnChallenge",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnChallenge",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 40,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "08259dca-d424-4e46-91ed-52fc40e1ef7f",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await existingEvents.OnAuthenticationFailed(context);",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnAuthenticationFailed"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "await existingEvents.OnAuthenticationFailed(context);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnAuthenticationFailed",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnAuthenticationFailed",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 94,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "101b7931-51da-4d80-aa35-975128229179",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnAuthenticationFailed"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnAuthenticationFailed",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnAuthenticationFailed",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 92,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "114ac588-722a-41c5-a217-7b4dc3a04ea9",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.AuthenticationFailedContext.Exception"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.AuthenticationFailedContext.Exception",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.AuthenticationFailedContext.Exception",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 87,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "0ca692ab-3d06-446d-a014-e56e1dcdf796",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnAuthenticationFailed"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnAuthenticationFailed",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnAuthenticationFailed",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 40,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "4f2bfef3-4ef5-4731-ab8b-0dfaff061bc2",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await existingEvents.OnTokenValidated(context);",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnTokenValidated"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "await existingEvents.OnTokenValidated(context);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnTokenValidated",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnTokenValidated",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 78,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "07fa45cc-8d83-428b-a309-ad51ad30add5",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnTokenValidated"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnTokenValidated",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnTokenValidated",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 76,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "31d4dcdd-0b9f-4def-9a8b-92cc52495d2d",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnTokenValidated"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnTokenValidated",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnTokenValidated",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 40,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "e9c1014d-43fb-4d46-8271-1b4ccb6d6917",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await existingEvents.OnMessageReceived(context);",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnMessageReceived"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "await existingEvents.OnMessageReceived(context);",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnMessageReceived",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnMessageReceived",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 55,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "61c5f83c-d59f-4c01-80bf-f74c456bf552",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnMessageReceived"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnMessageReceived",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnMessageReceived",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 53,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "6871b661-7fc6-4e70-8ad4-8ed667848006",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnMessageReceived"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnMessageReceived",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.OnMessageReceived",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 40,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "9e1be856-0727-40e4-acd0-e27ce12e3cab",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+              "protected": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents",
+            "label": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 40,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "4b9bb270-0561-490e-bf01-e0e18e392caf",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+              "protected": "M:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.#ctor"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+            "protectedSnippet": "M:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.#ctor",
+            "label": "M:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents.#ctor",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 40,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "0c29e4d5-90eb-440d-afda-1be9d0a61357",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+              "protected": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents",
+            "label": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 40,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "cd796feb-7fa5-4c66-8f53-925e5ae50439",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.Events"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.Events",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.Events",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 40,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "073ff9b7-720e-4a73-b1cf-64c850a1545a",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var existingEvents = options.Events;",
+              "protected": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "var existingEvents = options.Events;",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents",
+            "label": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerEvents",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 39,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "57e108ff-66ad-46e2-876a-00e36389d433",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var existingEvents = options.Events;",
+              "protected": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.Events"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "var existingEvents = options.Events;",
+            "protectedSnippet": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.Events",
+            "label": "P:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerOptions.Events",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 39,
+            "column": 4
+          }
+        },
+        {
+          "incidentId": "661b26c6-1c98-4b62-89e3-57560f86b41e",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.Configure\u003CJwtBearerOptions\u003E(JwtBearerDefaults.AuthenticationScheme, options =\u003E\r\n{\r\n    var existingEvents = options.Events;\r\n    options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };\r\n});",
+              "protected": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.Services.Configure\u003CJwtBearerOptions\u003E(JwtBearerDefaults.AuthenticationScheme, options =\u003E\r\n{\r\n    var existingEvents = options.Events;\r\n    options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };\r\n});",
+            "protectedSnippet": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults",
+            "label": "T:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 37,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "f25024d9-7a85-4807-bb1d-3186606fc02a",
+          "ruleId": "Api.0002",
+          "description": "API is available in package Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6. Add package reference to Microsoft.AspNetCore.Authentication.JwtBearer, 8.0.6",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Services.Configure\u003CJwtBearerOptions\u003E(JwtBearerDefaults.AuthenticationScheme, options =\u003E\r\n{\r\n    var existingEvents = options.Events;\r\n    options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };\r\n});",
+              "protected": "F:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.Services.Configure\u003CJwtBearerOptions\u003E(JwtBearerDefaults.AuthenticationScheme, options =\u003E\r\n{\r\n    var existingEvents = options.Events;\r\n    options.Events = new JwtBearerEvents\r\n    {\r\n        OnMessageReceived = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogInformation(\u0022JWT message received for {Method} {Path}. Authorization header present: {HasAuthorizationHeader}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Request.Headers.ContainsKey(\u0022Authorization\u0022));\r\n\r\n            if (existingEvents?.OnMessageReceived is not null)\r\n            {\r\n                await existingEvents.OnMessageReceived(context);\r\n            }\r\n        },\r\n        OnTokenValidated = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var claims = context.Principal?.Claims ?? Enumerable.Empty\u003CSystem.Security.Claims.Claim\u003E();\r\n            var subject = claims.FirstOrDefault(c =\u003E c.Type is \u0022sub\u0022 or \u0022http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier\u0022)?.Value;\r\n            var audience = claims.FirstOrDefault(c =\u003E c.Type == \u0022aud\u0022)?.Value;\r\n            var scope = claims.FirstOrDefault(c =\u003E c.Type is \u0022scp\u0022 or \u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            var roles = claims.Where(c =\u003E c.Type == \u0022roles\u0022).Select(c =\u003E c.Value).ToArray();\r\n\r\n            logger.LogInformation(\u0022JWT token validated. Subject: {Subject}, Audience: {Audience}, Scope: {Scope}, Roles: {Roles}\u0022,\r\n                subject,\r\n                audience,\r\n                scope,\r\n                roles.Length == 0 ? \u0022\u003Cnone\u003E\u0022 : string.Join(\u0022,\u0022, roles));\r\n\r\n            if (existingEvents?.OnTokenValidated is not null)\r\n            {\r\n                await existingEvents.OnTokenValidated(context);\r\n            }\r\n        },\r\n        OnAuthenticationFailed = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(context.Exception,\r\n                \u0022JWT authentication failed for {Method} {Path}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path);\r\n\r\n            if (existingEvents?.OnAuthenticationFailed is not null)\r\n            {\r\n                await existingEvents.OnAuthenticationFailed(context);\r\n            }\r\n        },\r\n        OnChallenge = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            logger.LogWarning(\u0022JWT challenge triggered for {Method} {Path}. Error: {Error}; Description: {Description}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                context.Error,\r\n                context.ErrorDescription);\r\n\r\n            if (existingEvents?.OnChallenge is not null)\r\n            {\r\n                await existingEvents.OnChallenge(context);\r\n            }\r\n        },\r\n        OnForbidden = async context =\u003E\r\n        {\r\n            var logger = context.HttpContext.RequestServices\r\n                .GetRequiredService\u003CILoggerFactory\u003E()\r\n                .CreateLogger(\u0022Authentication.JwtBearer\u0022);\r\n\r\n            var scope = context.HttpContext.User.FindFirst(\u0022scp\u0022)?.Value\r\n                ?? context.HttpContext.User.FindFirst(\u0022http://schemas.microsoft.com/identity/claims/scope\u0022)?.Value;\r\n            logger.LogWarning(\u0022JWT token authenticated but authorization failed for {Method} {Path}. Scope claim: {Scope}\u0022,\r\n                context.Request.Method,\r\n                context.Request.Path,\r\n                scope ?? \u0022\u003Cnone\u003E\u0022);\r\n\r\n            if (existingEvents?.OnForbidden is not null)\r\n            {\r\n                await existingEvents.OnForbidden(context);\r\n            }\r\n        }\r\n    };\r\n});",
+            "protectedSnippet": "F:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme",
+            "label": "F:Microsoft.AspNetCore.Authentication.JwtBearer.JwtBearerDefaults.AuthenticationScheme",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.Authentication.JwtBearer",
+              "PackageNewVersion": "8.0.6"
+            },
+            "line": 37,
+            "column": 0
+          }
+        },
+        {
+          "incidentId": "287008fa-6959-40c6-a781-7868a2605737",
+          "ruleId": "Api.0003",
+          "description": "Breaking change: Message no longer duplicated in Console log output ",
+          "projectPath": "i365.Mcp.EchoMCPServer.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "builder.Logging.AddConsole(cfg =\u003E\r\n{\r\n    cfg.LogToStandardErrorThreshold = LogLevel.Trace;\r\n    cfg.FormatterName = \u0022json\u0022;\r\n});",
+              "protected": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder,System.Action{Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions})"
+            },
+            "kind": "File",
+            "path": "Program.cs",
+            "snippet": "builder.Logging.AddConsole(cfg =\u003E\r\n{\r\n    cfg.LogToStandardErrorThreshold = LogLevel.Trace;\r\n    cfg.FormatterName = \u0022json\u0022;\r\n});",
+            "protectedSnippet": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder,System.Action{Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions})",
+            "label": "M:Microsoft.Extensions.Logging.ConsoleLoggerExtensions.AddConsole(Microsoft.Extensions.Logging.ILoggingBuilder,System.Action{Microsoft.Extensions.Logging.Console.ConsoleLoggerOptions})",
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/extensions/10.0/console-json-logging-duplicate-messages.md",
+                "isCustom": false
+              }
+            ],
+            "line": 13,
+            "column": 0
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "isFeature": false,
+      "description": "API is source incompatible for selected .NET version: requires code changes to compile successfully when targeting a new version, such as removing obsolete APIs or changing method signatures.",
+      "label": "Source incompatible for selected .NET version",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0001": {
+      "id": "Api.0001",
+      "isFeature": false,
+      "description": "API is binary incompatible for selected .NET version: affects existing binaries, often requiring recompilation, because the API has changed in a way that prevents older binaries from loading or executing.",
+      "label": "Binary incompatible for selected .NET version",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0003": {
+      "id": "Api.0003",
+      "isFeature": false,
+      "description": "API has a behavioral change in selected .NET version: code and binaries may behave differently at runtime without needing recompilation, but the new behavior might be undesirable and require updates.",
+      "label": "Behavioral change in selected .NET version",
+      "severity": "Potential",
+      "effort": 1
+    }
+  }
+}

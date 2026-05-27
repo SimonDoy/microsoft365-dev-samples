@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <RootNamespace>i365.Mcp.EchoSecureMCPServer</RootNamespace>
@@ -27,7 +27,7 @@
     <ContainerRegistry>[containerregistryname].azurecr.io</ContainerRegistry>
     <ContainerFamily>alpine</ContainerFamily>
     <ContainerRuntimeIdentifiers>linux-x64;linux-arm64</ContainerRuntimeIdentifiers>
-    <ContainerBaseImage>mcr.microsoft.com/dotnet/sdk:9.0</ContainerBaseImage>
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/sdk:10.0</ContainerBaseImage>
   </PropertyGroup>
 
   <ItemGroup>
@@ -38,9 +38,13 @@
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
   </ItemGroup>
+
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.8" />
-    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.2" />
+    <None Include=".github\upgrades\scenarios\new-dotnet-version_df638e\plan.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.8" />
     <PackageReference Include="Microsoft.Identity.Web" Version="4.10.0" />
     <PackageReference Include="ModelContextProtocol" Version="0.7.0-preview.1" />
     <PackageReference Include="ModelContextProtocol.AspNetCore" Version="0.7.0-preview.1" />
