@@ -11,3 +11,8 @@ The application is a demo and makes up part of a solution. You can read more abo
 This sample has a Visual Studio .NET project, which shows a simple MCP Server which can then be deployed to Azure as a container within an Azure Container Registry and deployed to Azure App Service.
 
 [Get the code](./copilot-mcp-azure-containers/README.md)
+
+## Custom Secure by Entra ID MCP Server as Azure-hosted Container Sample
+This sample has a Visual Studio .NET project, which shows a simple MCP Server that is secured by Microsoft Entra ID which can then be deployed to Azure as a container within an Azure Container Registry and deployed to Azure App Service.
+
+[Get the code](./copilot-secure-mcp-azure-containers/README.md)

@@ -1,0 +1,149 @@
+# iThink 365 Core Api Release Pipeline Template
+# This will become the pipeline that pushes the code into the Azure Dev Ops Artifacts library.
+
+name: 'Set dynamically later'
+
+trigger: none
+
+variables:
+  - name: release.releaseName
+    value: '[set by build]'
+  - name: release.deployment_startTime
+    value: '2020/10/13'
+  - name: version.Major
+    value: 1
+  - name: version.Minor
+    value: 0
+  - name: version.MajorMinor
+    value: '1.0'
+  - name: version.Revision
+    value: $[counter(variables['version.MajorMinor'], 0)]
+  - name: versionNumber
+    value: '$(version.MajorMinor).$(version.Revision)'
+  - name: buildConfiguration
+    value: 'Release'
+  - name: apiProjectPath
+    value: 'i365.Mcp.PeopleHR.csproj'
+
+resources:
+  pipelines:
+  - pipeline: api
+    source: '[Update with Build Pipeline Name e.g. Echo MCP Server Build CI]' # name of the pipeline that produces an artifact
+    trigger:
+      branches:
+        include:
+        - main
+        - feature*
+        - releases/*
+        exclude:
+        - releases/old*
+        - dev-ops/**
+
+parameters:
+  - name: deployToCustomer
+    type: boolean
+    default: false
+    displayName: 'Deploy to Customer?'
+
+stages:
+  - stage: SetReleaseNumber
+    displayName: "Set Release Number"
+    pool:
+      vmImage: 'windows-latest'
+    jobs:
+    - job: 'validate'
+      pool:
+        vmImage: 'windows-latest'
+      steps:
+      - task: PowerShell@2
+        displayName: Set the name of the build (i.e. the Build.BuildNumber)
+        inputs:
+          targetType: 'inline'
+          script: |
+            [string] $buildName = "$(versionNumber)_$(Build.SourceBranchName)"
+            Write-Host "Setting the buildNumber to '$(versionNumber)'."
+            Write-Host "##vso[build.updatebuildnumber]$(versionNumber)"
+            ##vso[build.updatebuildnumber]$(versionNumber)
+            Write-Host "Tagging build with '$($buildName)'."
+            Write-Host "##vso[build.addbuildtag]$buildName"
+            ##vso[release.addbuildtag]$buildName
+            Write-Host "##vso[build.addbuildtag]$(Build.SourceBranchName)"
+            ##vso[release.addbuildtag]$(Build.SourceBranchName)
+
+      - task: PowerShell@2
+        displayName: Set application release information
+        inputs:
+          targetType: 'inline'
+          script: |
+            $releaseDate = Get-Date;
+            Write-Host "Setting the release date to '$releaseDate'."
+            ##vso[release.deployment_startTime]$($releaseDate.ToString("o"))
+            Write-Host "##vso[task.setvariable variable=release.deployment_startTime;isOutput=true]$releaseDate.ToString('o')"
+
+  - stage: Dev
+    condition: true
+    dependsOn:
+      - SetReleaseNumber
+    displayName: 'Dev'
+    jobs:
+      # track deployments on the environment
+    - deployment: McpServer
+      displayName: Deploy Mcp Server
+      pool:
+        vmImage: 'windows-latest'
+      # creates an environment if it doesn't exist
+      environment: 'Dev'
+      variables:
+        - group: 'mcp-echomcpserver-dev'
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - template: template/i365-mcp-release-template-step.yml
+              parameters:
+                azureSubscriptionName: '[Azure Subscription Service Connection Name]'
+                mcpProjectPath: '$(apiProjectPath)'
+
+  - stage: UAT
+    dependsOn:
+      - SetReleaseNumber
+    condition: eq('${{ parameters.deployToCustomer }}', 'True')
+    displayName: 'UAT'
+    jobs:
+      # track deployments on the environment
+    - deployment: McpServer
+      displayName: Deploy Mcp Server
+      pool:
+        vmImage: 'windows-latest'
+      # creates an environment if it doesn't exist
+      environment: 'UAT'
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - template: template/i365-mcp-release-template-step.yml
+              parameters:
+                azureSubscriptionName: '[Azure Subscription Service Connection Name]'
+                mcpProjectPath: '$(apiProjectPath)'
+
+  - stage: Production
+    dependsOn:
+      - SetReleaseNumber
+    condition: eq('${{ parameters.deployToCustomer }}', 'True')
+    displayName: 'Production'
+    jobs:
+      # track deployments on the environment
+    - deployment: McpServer
+      displayName: Deploy Mcp Server
+      pool:
+        vmImage: 'windows-latest'
+      # creates an environment if it doesn't exist
+      environment: 'Production'
+      strategy:
+        runOnce:
+          deploy:
+            steps:
+            - template: template/i365-mcp-release-template-step.yml
+              parameters:
+                azureSubscriptionName: '[Azure Subscription Service Connection Name]'
+                mcpProjectPath: '$(apiProjectPath)'

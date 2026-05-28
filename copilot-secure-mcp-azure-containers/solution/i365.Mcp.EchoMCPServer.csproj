@@ -1,0 +1,77 @@
+﻿<Project Sdk="Microsoft.NET.Sdk;Microsoft.NET.Sdk.Publish">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>i365.Mcp.EchoSecureMCPServer</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackAsTool>true</PackAsTool>
+    <ToolName>i365.Mcp.EchoMCPServer</ToolName>
+    <ToolCommandName>i365.Mcp.EchoMCPServer</ToolCommandName>
+    <IsPackable>true</IsPackable>
+  </PropertyGroup>
+
+  <PropertyGroup Label="Package">
+    <Product>i365.Mcp.EchoMCPServer</Product>
+    <Description>MCP Server in Stdio Mode</Description>
+    <PackageTags>mcp;template;dotnet</PackageTags>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+    <ContainerRepository>ithink365/echomcp</ContainerRepository>
+    <ContainerRegistry>[containerregistryname].azurecr.io</ContainerRegistry>
+    <ContainerFamily>alpine</ContainerFamily>
+    <ContainerRuntimeIdentifiers>linux-x64;linux-arm64</ContainerRuntimeIdentifiers>
+    <ContainerBaseImage>mcr.microsoft.com/dotnet/sdk:10.0</ContainerBaseImage>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ContainerEnvironmentVariable Include="ASPNETCORE_URLS " Value="http://*:8080;http://*:5000" />
+    <ContainerEnvironmentVariable Include="ASPNETCORE_HTTP_PORTS " Value="8080;5000" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include=".github\upgrades\scenarios\new-dotnet-version_df638e\plan.md" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="10.0.8" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.8" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="4.10.0" />
+    <PackageReference Include="ModelContextProtocol" Version="1.3.0" />
+    <PackageReference Include="ModelContextProtocol.AspNetCore" Version="1.3.0" />
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.28.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="ModelContextProtocol" />
+    <Using Include="ModelContextProtocol.Server" />
+    <Using Include="System.ComponentModel" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="appsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="appsettings.Development.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
+
+
+
+
+
+
+
+
+
