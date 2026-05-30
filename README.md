@@ -16,3 +16,10 @@ This sample has a Visual Studio .NET project, which shows a simple MCP Server wh
 This sample has a Visual Studio .NET project, which shows a simple MCP Server that is secured by Microsoft Entra ID which can then be deployed to Azure as a container within an Azure Container Registry and deployed to Azure App Service.
 
 [Get the code](./copilot-secure-mcp-azure-containers/README.md)
+
+## Microsoft Copilot Cowork Plugin Sample
+This sample is a Microsoft 365 Copilot Cowork Plugin that uses a secured MCP Server as well as custom Skill to allow users to fill out their timesheets and work with Toggl. We use this application at iThink 365.
+It provides an example of a skill that has been used within an organisation.
+For more information, check out the [blog post](https://simondoy.com/2026/05/30/my-experiences-build-secure-mcp-powered-copilot-cowork-plugins/)
+
+[Get the code](./cowork-toggl-plugin-example/README.md)
