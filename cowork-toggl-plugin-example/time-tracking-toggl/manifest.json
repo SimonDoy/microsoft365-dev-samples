@@ -1,0 +1,46 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/teams/vDevPreview/MicrosoftTeams.schema.json",
+  "manifestVersion": "devPreview",
+  "version": "1.4.2",
+  "id": "550e8400-e29b-41d4-a716-446655440010",
+  "packageName": "uk.co.ithink365.projects.time-tracking-toggl",
+  "developer": {
+    "name": "iThink 365",
+    "websiteUrl": "https://ithink365.com",
+    "privacyUrl": "https://ithink365.com/privacy",
+    "termsOfUseUrl": "https://ithink365.com/terms",
+    "mpnId": ""
+  },
+  "name": {
+    "short": "iThink 365 Task Tracking Toggl",
+    "full": "iThink 365 Task Tracking Toggl for Copilot Cowork"
+  },
+  "description": {
+    "short": "Task tracking integration with Toggl",
+    "full": "Comprehensive time and task tracking tools for project work with Copilot Cowork including integration with Toggl Track for project and task time management."
+  },
+  "icons": {
+    "color": "color.png",
+    "outline": "outline.png"
+  },
+  "accentColor": "#2B579A",
+  "agentSkills": [
+    { "folder": "./skills/time-tracking-toggl" }
+  ],
+  "agentConnectors": [
+    {
+      "id": "task-tracking-toggl",
+      "displayName": "iThink 365 Time Tracking Toggl MCP Server",
+      "description": "Access iThink 365 Tasks and Timesheets with entries via the Toggl MCP server for integrating with the Toggl Track API.",
+      "toolSource": {
+        "remoteMcpServer": {
+          "mcpServerUrl": "https://[your toggl mcp server endpoint]/api/mcp",
+          "authorization": {
+            "type": "OAuthPluginVault",
+            "referenceId": "[Your OAuth plugin vault reference ID for the Toggl MCP server]"
+          }
+        }
+      }
+    }
+  ]
+}
