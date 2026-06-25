@@ -23,3 +23,7 @@ It provides an example of a skill that has been used within an organisation.
 For more information, check out the [blog post](https://simondoy.com/2026/05/30/my-experiences-build-secure-mcp-powered-copilot-cowork-plugins/)
 
 [Get the code](./cowork-toggl-plugin-example/README.md)
+
+## iThink 365 MCP Server Agent Skill
+This skill will help you scaffold out an MCP Server in the way that we do it at iThink 365 wiht observability, monitoring, Entra ID Security and more.
+[iThink 365 MCP Server Agent Skill](./.agents/skills/ithink365-mcp-server/SKILL.md)
